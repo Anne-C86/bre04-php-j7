@@ -1,9 +1,10 @@
 <?php
-$passwordText = $_POST['password'];
+$password = $_GET["password"];
+$hash = $_GET["hash"];
 
-$hashedPassword = password_hash($passwordText, PASSWORD_DEFAULT);
+$isValid = password_verify($password, $hash);
 
-$isPasswordCorrect = password_verify($passwordText, $hashedPassword);
+$isPasswordCorrect = password_verify($password, $hash);
 
 if ($isPasswordCorrect === true) {
     echo "Mot de passe correct";
