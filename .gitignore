@@ -1,1 +1,3 @@
 /auth/correction/.env
+/auth/correction/vendor/
+/auth/correction/composer.lock
